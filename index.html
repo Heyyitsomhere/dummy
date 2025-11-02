@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydroflux Vision - Water Treatment Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-section {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin: -40px auto 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(rgba(30, 60, 114, 0.7), rgba(42, 82, 152, 0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%232a5298" width="1200" height="400"/><path fill="%231e3c72" opacity="0.3" d="M0,200 Q300,100 600,200 T1200,200 L1200,400 L0,400 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .inception {
+            display: inline-block;
+            background: #2a5298;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .vision-title {
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .vision-intro {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            margin: 40px 0 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .vision-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .vision-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #2a5298;
+        }
+
+        .vision-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .vision-card h3 {
+            color: #1e3c72;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .vision-card h3::before {
+            content: "→";
+            color: #2a5298;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .vision-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .closing-statement {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .products-section {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .product-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #2a5298;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-item:hover {
+            background: #2a5298;
+            color: white;
+            border-color: #1e3c72;
+        }
+
+        .clients-section {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .client-logo {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 2px solid #e9ecef;
+        }
+
+        .client-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #2a5298;
+        }
+
+        .footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-section {
+                padding: 20px;
+            }
+
+            .vision-points {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid,
+            .clients-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Hydroflux Engineering Pvt Ltd</h1>
+        <p>Leading Provider of Water Treatment Solutions</p>
+    </div>
+
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-image">
+                Water Treatment Excellence
+            </div>
+
+            <span class="inception">Incepted in 2016</span>
+            
+            <h2 class="vision-title">Hydroflux Vision</h2>
+            
+            <p class="vision-intro">
+                At Hydroflux Engineering Pvt Ltd, our vision is to be the leading provider of innovative and sustainable water treatment solutions globally. We aspire to be the preferred choice for clients seeking reliable and efficient ETP, STP, UF, DM, WTP and RO plants, delivering exceptional value through our commitment to quality, integrity, and customer satisfaction.
+            </p>
+
+            <p class="vision-intro">Our vision encompasses:</p>
+
+            <div class="vision-points">
+                <div class="vision-card">
+                    <h3>Innovation</h3>
+                    <p>We strive to continuously innovate and push the boundaries of water treatment technology, developing solutions that are efficient, cost-effective, and environmentally sustainable.</p>
+                </div>
+
+                <div class="vision-card">
+                    <h3>Sustainability</h3>
+                    <p>We are dedicated to promoting sustainable practices in water treatment, ensuring the responsible use of resources and the preservation of our planet's precious water bodies.</p>
+                </div>
+
+                <div class="vision-card">
+                    <h3>Customer Satisfaction</h3>
+                    <p>We prioritize the needs and satisfaction of our customers, delivering tailored solutions that exceed expectations and add value to their operations.</p>
+                </div>
+
+                <div class="vision-card">
+                    <h3>Global Reach</h3>
+                    <p>We aim to expand our presence and impact worldwide, building partnerships and collaborations to address the water treatment challenges faced by diverse industries and communities.</p>
+                </div>
+
+                <div class="vision-card">
+                    <h3>Leadership</h3>
+                    <p>We aspire to be recognized as leaders in the field of water treatment, setting industry standards for quality, reliability, and performance.</p>
+                </div>
+            </div>
+
+            <div class="closing-statement">
+                Through our vision, we are committed to creating a brighter, cleaner future for generations to come, where access to safe and clean water is a fundamental right for all. Join us on our journey towards a sustainable and water-secure world.
+            </div>
+        </div>
+
+        <div class="products-section">
+            <h2 class="section-header">Hydroflux Products</h2>
+            <div class="products-grid">
+                <div class="product-item">ETP Plants</div>
+                <div class="product-item">STP Plants</div>
+                <div class="product-item">UF Systems</div>
+                <div class="product-item">DM Plants</div>
+                <div class="product-item">WTP Plants</div>
+                <div class="product-item">RO Plants</div>
+            </div>
+        </div>
+
+        <div class="clients-section">
+            <h2 class="section-header">Our Clients Testimony</h2>
+            <div class="clients-grid">
+                <div class="client-logo">Client 1</div>
+                <div class="client-logo">Client 2</div>
+                <div class="client-logo">Client 3</div>
+                <div class="client-logo">Client 4</div>
+                <div class="client-logo">Client 5</div>
+                <div class="client-logo">Client 6</div>
+                <div class="client-logo">Client 7</div>
+                <div class="client-logo">Client 8</div>
+                <div class="client-logo">Client 9</div>
+                <div class="client-logo">Client 10</div>
+                <div class="client-logo">Client 11</div>
+                <div class="client-logo">Client 12</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Hydroflux Engineering Pvt Ltd. All rights reserved.</p>
+        <p>Committed to Clean Water Solutions</p>
+    </div>
+</body>
+</html>
